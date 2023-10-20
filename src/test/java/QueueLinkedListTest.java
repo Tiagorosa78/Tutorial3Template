@@ -99,4 +99,21 @@ public class QueueLinkedListTest {
         // Verificando que a fila está vazia após a remoção
         assertTrue(queue.isEmpty());
     }
+
+    public void testIsEmptyAfterClearWithElements() {
+        // Inserindo elementos na fila
+        queue.enqueue(1);
+        queue.enqueue(2);
+
+        // Verificando que a fila não está vazia antes da limpeza
+        assertFalse(queue.isEmpty());
+
+        // Realizando a limpeza da fila
+        queue.clear();
+
+        // Verificando que a fila está vazia após a limpeza
+        assertTrue(queue.isEmpty());
+    }
+    
+
 }

@@ -19,7 +19,7 @@ public class QueueLinkedList<T> implements Queue<T>   {
     @Override
     public void enqueue(T elem) throws QueueFullException, NullPointerException {
         if (elem == null) {
-            throw new NullPointerException("Cannot enqueue null element");
+            throw new NullNotAllowedException("Null elements are not allowed.");
         }
 
         ListNode newElement = new ListNode(elem, trailer.prev, trailer);
